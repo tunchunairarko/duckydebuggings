@@ -4,6 +4,7 @@ import Axios from "axios";
 import UserContext from "./context/UserContext";
 import ComponentTest from './ComponentTest';
 import PublicRoute from './router/PublicRoute'
+import Home from "./frontendsite/layouts/Home";
 
 export default function App() {
   const [userData, setUserData] = useState({
@@ -13,11 +14,12 @@ export default function App() {
 
   return (
     <Fragment>
+      
       <BrowserRouter>
         <UserContext.Provider value={{ userData, setUserData }}>
           <Routes>
             {/*THE FRONT END WEBSITE SECTION*/}
-            <Route path="/" element={<PublicRoute restricted={true} component={ComponentTest} path="/" exact />} />
+            <Route path="/" element={<PublicRoute restricted={true} component={Home} path="/" exact />} />
             {/* <PublicRoute restricted={true} component={ComponentTest} path="/" exact /> */}
             {/* <PublicRoute restricted={true} component={Home} path="/" exact />
             <PublicRoute restricted={true} component={About} path="/about-us" exact />
