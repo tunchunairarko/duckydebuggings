@@ -1,14 +1,14 @@
-@url = http://localhost:8080/api/user
+@url = http://localhost:8080/api/user  //all users
 
 GET {{url}} HTTP/1.1
 
 ###
 
-GET {{url}}/4 HTTP/1.1
+GET {{url}}/4 HTTP/1.1 //particular user
 
 ###
 
-POST {{url}}/ HTTP/1.1
+POST {{url}}/ HTTP/1.1 //Create new user
 Content-Type: application/json
 
 {
@@ -20,7 +20,7 @@ Content-Type: application/json
 
 ###
 
-PUT {{url}}/4 HTTP/1.1
+PUT {{url}}/4 HTTP/1.1  //updating a single user
 Content-Type: application/json
 
 {
@@ -32,4 +32,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE {{url}}/4 HTTP/1.1
+DELETE {{url}}/4 HTTP/1.1  /deleting a user
