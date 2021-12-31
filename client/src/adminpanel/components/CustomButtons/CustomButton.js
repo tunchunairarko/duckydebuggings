@@ -1,16 +1,17 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import '../../assets/style.css'
 
-const CustomButton = ({ type, size, color, text, onClick }) => {
+const CustomButton = ({ type, size, title, onClick }) => {
   return (
     <>
-      <Button
+      <Button className="btn-color"
         onClick={onClick}
         type={type}
         size={size}
-        variant={color}
+        //variant={color}
       >
-        {text}
+        {title}
       </Button>
     </>
   );
