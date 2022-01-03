@@ -1,0 +1,24 @@
+import React from "react";
+import Button from "react-bootstrap/Button";
+import '../../assets/style.css'
+
+const ViewButton = ({ type, size, title, onClick }) => {
+  return (
+    <>
+      <Button className="btn-color"
+        onClick={onClick}
+        type={type}
+        size={size}
+        //variant={color}
+      >
+        {title}
+      </Button>
+    </>
+  );
+};
+
+CustomButton.defaultProps = {
+  title: "Button",
+};
+
+export default ViewButton
