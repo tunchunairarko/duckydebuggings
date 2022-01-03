@@ -1,0 +1,116 @@
+body{
+    font-family: 'Nunito', sans-serif!important;
+    color: #5a6980!important;
+}
+
+body h1{
+    font-weight: 900;
+    font-size: 5vw;
+}
+body h2{
+    font-weight: 900;
+    font-size: 5vh;
+}
+body h5{
+    font-weight: 400;
+    font-size: 2.5vh;
+}
+
+
+.py-8{
+    padding-top: 8rem !important;
+}
+.text-align-center{
+    text-align: center;
+}
+
+.max-width-150{
+    max-width: 150px!important;
+}
+.min-width-128 > svg{
+    transform: scale(4);
+}
+.feature-card-icon{
+    margin: 4rem 1rem;
+}
+.top-bottom-margin-8rem{
+    margin-top:8rem!important;
+    margin-bottom:8rem!important;
+}
+.bottom-margin-8rem{
+    margin-bottom:8rem;
+}
+
+#search-icon-banner{
+    border:0px solid rgba(255,255,255,0)!important;
+    background-color: rgba(255,255,255,0)!important;
+}
+.search-bar-banner{
+    border: 1px solid #ced4da!important;
+    border-radius:8px;
+}
+:is(.search-bar-banner) input,button{
+    border: 0px!important;
+}
+
+.dashboard-card-footer{
+    background-color:rgba(255,255,255)!important;
+}
+@media (min-width: 1281px){
+    .dashboard-card-title{
+        color:#7f8c8d;
+    }
+    .dashboard-card-subtitle{
+        font-size:0.85em!important;
+    }
+    .dashboard-card-title{
+        font-size:1.5em!important;
+    }
+    .dashboard-card-img{
+        max-width: 40%!important;;
+    }
+}
+@media (min-width: 319px) and (max-width: 1280px) {
+    .dashboard-card-title{
+        font-size:1.2em!important;
+    }
+    .dashboard-card-subtitle{
+        font-size:0.85em!important;
+    }
+    .dashboard-card-img{
+        max-width: 40%!important;;
+    }
+    .dashboard-card-footer{
+        padding-right:10px!important;
+        padding-left:10px!important;
+    }
+  }
+
+.card-stats{
+    border-radius: 8px!important;
+    border: 0px solid;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+}
+
+.feature-cards{
+    border-radius: 8px!important;
+    border: 0px solid;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+}
+/* .padding-r-l-75{
+    padding-left: 10%!important;
+    padding-right: 10%!important;
+} */
+#root{
+    background-color: rgba(142, 197, 252, 0.123);
+    background-image: linear-gradient(75deg, #8ec5fc2d 0%, #e0c3fc1e 56%, #b0c8fb13 99%);
+    
+}
+
+
+
+h1,h2,h3{
+background: -webkit-linear-gradient(315deg, #4158d0 0%, #E0C3FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
