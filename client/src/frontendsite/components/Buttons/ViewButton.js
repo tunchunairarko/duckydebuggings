@@ -1,23 +1,24 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import '../../assets/style.css'
+import "../assets/style.css"
+import {IoIosEye} from 'react-icons/io'
 
-const ViewButton = ({ type, size, title, onClick }) => {
+const ViewButton = ({ type, title, onClick }) => {
   return (
     <>
-      <Button className="btn-color"
+      <Button className="view-btn-color view-member-btn"
         onClick={onClick}
         type={type}
-        size={size}
         //variant={color}
       >
+        <IoIosEye/>
         {title}
       </Button>
     </>
   );
 };
 
-CustomButton.defaultProps = {
+ViewButton.defaultProps = {
   title: "Button",
 };
 

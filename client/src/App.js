@@ -7,6 +7,7 @@ import PublicRoute from './router/PublicRoute'
 import Home from "./frontendsite/layouts/Home";
 import MemberBoard from "./frontendsite/layouts/MemberBoard";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import IndividualMember from "./frontendsite/layouts/IndividualMember";
 
 
 export default function App() {
@@ -23,8 +24,9 @@ export default function App() {
           <Routes>
             {/*THE FRONT END WEBSITE SECTION*/}
             {/* <Route path="/" element={<PublicRoute restricted={true} component={Home} path="/" exact />} /> */}
-            <Route path="/" element={<Home/>} />
+            {/* <Route path="/" element={<Home/>} /> */}
             <Route path="/" element={<MemberBoard/>} />
+            {/* <Route path="/" element={<IndividualMember/>} /> */}
             {/* <PublicRoute restricted={true} component={ComponentTest} path="/" exact /> */}
             {/* <PublicRoute restricted={true} component={Home} path="/" exact />
             <PublicRoute restricted={true} component={About} path="/about-us" exact />

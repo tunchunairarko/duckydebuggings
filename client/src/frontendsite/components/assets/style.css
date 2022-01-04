@@ -114,3 +114,40 @@ background: -webkit-linear-gradient(315deg, #4158d0 0%, #E0C3FC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.view-btn-color {
+    background: #3A49CD;
+}
+
+.notdisplayed {
+    opacity: 0;
+}
+
+.displayed{
+    transition: opacity 450ms;
+    opacity: 1;
+}
+
+.member-card-img{
+    max-width: 96px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+:is(.member-card) .h5{
+    font-size: 1.2vw!important;
+}
+:is(.member-card) .h6{
+    font-size: 1vw!important;
+}
+:is(.member-card) p{
+    font-size: 0.875vw!important;
+}
+/* .member-card{
+    height:350px;
+} */
+
+.view-member-btn{
+    border-radius: 0px!important;
+}
