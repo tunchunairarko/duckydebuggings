@@ -13,20 +13,21 @@ export default function Header() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto justify-content-center">
                         <Nav.Item>
-                            <Nav.Link href="#features">Home</Nav.Link>
+                            <Nav.Link href="/">Home</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="#pricing">About us</Nav.Link>
+                            <Nav.Link href="/">About us</Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>
-                            <NavDropdown title="Our Members" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <Nav.Link href="/our-members">Our Members</Nav.Link>
+                            {/* <NavDropdown title="Our Members" id="collasible-nav-dropdown">
+                                <NavDropdown.Item href="/members/12345">Action</NavDropdown.Item>
+                                <NavDropdown.Item href="/members/12345">Another action</NavDropdown.Item>
+                                <NavDropdown.Item href="/members/12345">Something</NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                            </NavDropdown>
+                                <NavDropdown.Item href="/members/12345">Separated link</NavDropdown.Item>
+                            </NavDropdown> */}
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link href="#pricing">Case Studies</Nav.Link>
@@ -40,7 +41,7 @@ export default function Header() {
                         <Nav.Link eventKey={2} href="#memes">
                             Log in
                         </Nav.Link>
-                        <Nav.Link eventKey={3} href="#memes" className="btn btn-responsive btn-primary">
+                        <Nav.Link eventKey={3} href="#memes" className="btn btn-responsive btn-primary" style={{color:'#fff'}}>
                             Sign up
                         </Nav.Link>
                     </Nav>
