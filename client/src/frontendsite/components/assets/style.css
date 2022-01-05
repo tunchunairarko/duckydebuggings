@@ -144,10 +144,17 @@ background: -webkit-linear-gradient(315deg, #4158d0 0%, #E0C3FC 100%);
 :is(.member-card) p{
     font-size: 0.875vw!important;
 }
-/* .member-card{
-    height:350px;
-} */
-
 .view-member-btn{
     border-radius: 0px!important;
+}
+
+.card {
+    background-color:none!important;
+    border: none !important;
+}
+.card-img {
+    border-radius: 20px!important;
+}
+.card-body {
+    background-color:none!important;
 }
