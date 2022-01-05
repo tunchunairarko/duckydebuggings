@@ -20,7 +20,7 @@ public class UserDetailAccountJdbcTemplateRepository implements UserDetailAccoun
 
     @Override
     public List<UserDetailAccount> findAll() {
-        final String sql = "select account.userAccount_id,account.username,account.email,account.password,account.phone,account.address,account.avatar,account.userRole_id,account.education,account.skills,account.accountCreation_date,account.designation,account.bio,"
+        final String sql = "select account.userAccount_id,account.username,account.email,account.phone,account.address,account.avatar,account.userRole_id,account.education,account.skills,account.accountCreation_date,account.designation,account.bio,"
                 +"availability.id,availability.starting_date,availability.ending_date "
                 +"from useraccount account "
                 + "inner join useravailability availability on account.userAccount_id = availability.userAcc_id ";
@@ -30,7 +30,7 @@ public class UserDetailAccountJdbcTemplateRepository implements UserDetailAccoun
 
     @Override
     public UserDetailAccount findById(int id) {
-        final String sql = "select account.userAccount_id,account.username,account.email,account.password,account.phone,account.address,account.avatar,account.userRole_id,account.education,account.skills,account.accountCreation_date,account.designation,account.bio,"
+        final String sql = "select account.userAccount_id,account.username,account.email,account.phone,account.address,account.avatar,account.userRole_id,account.education,account.skills,account.accountCreation_date,account.designation,account.bio,"
                 +"availability.id,availability.starting_date,availability.ending_date "
                 +"from useraccount account "
                 + "inner join useravailability availability on account.userAccount_id = availability.userAcc_id "
