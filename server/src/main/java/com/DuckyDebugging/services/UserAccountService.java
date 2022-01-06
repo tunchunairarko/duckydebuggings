@@ -71,10 +71,6 @@ public class UserAccountService {
             return result;
         }
 
-        if (Validations.isNullOrBlank(userAccount.getUsername())) {
-            result.addMessage("name is required", ResultType.INVALID);
-        }
-
         return result;
     }
 }

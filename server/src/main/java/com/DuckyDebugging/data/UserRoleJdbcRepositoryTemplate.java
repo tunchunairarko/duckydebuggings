@@ -31,6 +31,11 @@ public class UserRoleJdbcRepositoryTemplate implements  UserRoleRepository{
         final String sql = "select * from user_role where userRole_id =?;";
         return jdbcTemplate.query(sql,new UserRoleMapper(), id).stream().findAny().orElse(null);
     }
+    @Override
+    public UserRole findByName(String name) {
+        final String sql = "select * from user_role where role_name =?;";
+        return jdbcTemplate.query(sql,new UserRoleMapper(), name).stream().findAny().orElse(null);
+    }
 
     @Override
     public UserRole add(UserRole userRole) {

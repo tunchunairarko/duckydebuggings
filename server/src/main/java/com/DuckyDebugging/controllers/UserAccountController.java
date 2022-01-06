@@ -52,8 +52,8 @@ public class UserAccountController {
     }
 
     @DeleteMapping("/{userAccountId}")
-    public ResponseEntity<Void> deleteById(@PathVariable int agentId) {
-        if (service.deleteById(agentId)) {
+    public ResponseEntity<Void> deleteById(@PathVariable int userAccountId) {
+        if (service.deleteById(userAccountId)) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         throw new RecordNotFoundException("Sorry, Record not found");

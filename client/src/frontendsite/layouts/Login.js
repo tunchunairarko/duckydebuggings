@@ -29,7 +29,7 @@ export default function Login() {
     }, [error])
 
     return (
-        <Fragment>
+        <main className='front-end-main'>
             <Header></Header>
             <Container className='padding-r-l-75 login-form'>
                 <Jumbotron>
@@ -59,6 +59,6 @@ export default function Login() {
                 </Jumbotron>
             </Container>
             <Footer></Footer>
-        </Fragment>
+        </main>
     )
 }

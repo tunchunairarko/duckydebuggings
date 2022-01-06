@@ -10,7 +10,7 @@ public interface UserRoleRepository {
     List<UserRole> findAll();
 
     UserRole findById(int id);
-
+    UserRole findByName(String name);
     UserRole add(UserRole userRole);
 
     boolean update(UserRole userRole);

@@ -1,10 +1,10 @@
 
-import React, { Fragment } from 'react'
-import { Col, Container, Row, Button, Image, InputGroup, FormControl } from 'react-bootstrap'
+import React from 'react'
+import { Col, Container, Row, Button, Image} from 'react-bootstrap'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import '../components/assets/style.css'
-import IndividualBackground from '../components/assets/IndividualBackground.jpg'
+
 import DuckAvatar from '../components/assets/duck-avatar-1.png'
 import FeaturePostCards from '../components/Cards/FeaturedPostCards'
 import DuckAvatar1 from '../components/assets/duck-avatar-1.png'
@@ -13,7 +13,7 @@ import DuckAvatar1 from '../components/assets/duck-avatar-1.png'
 
 export default function IndividualMember() {
     return (
-        <Fragment>
+        <main className='front-end-main'>
             <Header></Header>
             <Container className='padding-r-l-75 position-relative'>
 
@@ -67,6 +67,6 @@ export default function IndividualMember() {
                 </Row>
             </Container>
             <Footer></Footer>
-        </Fragment>
+        </main>
     )
 }

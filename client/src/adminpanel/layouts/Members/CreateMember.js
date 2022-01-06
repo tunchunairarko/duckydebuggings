@@ -3,10 +3,10 @@ import "../../assets/style.css" //custom css
 import { Container } from 'react-bootstrap'
 import Header from '../../components/Header/Header'
 import Sidebar from '../../components/Sidebar/Sidebar'
-import {FaBars} from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
 import '../../assets/admin-panel.scss'
 
-export default function Dashboard() {
+export default function CreateMember() {
     const [collapsed] = useState(false);
 
     const [toggled, setToggled] = useState(false);
@@ -31,7 +31,7 @@ export default function Dashboard() {
                     </div>
                     <Header />
                     <Container>
-                        WORK
+                        fajklsdfkjasjdfklja
                     </Container>
                 </main>
             </div>

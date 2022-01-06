@@ -13,7 +13,7 @@ import javax.persistence.GeneratedValue;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "UserAvailability")
+@Table(name = "useravailability")
 public class UserAvailability {
     @Id
     @GeneratedValue

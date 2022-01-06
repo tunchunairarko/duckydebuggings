@@ -1,5 +1,7 @@
 package com.DuckyDebugging.data.mapper;
 
+import com.DuckyDebugging.data.UserRoleJdbcRepositoryTemplate;
+import com.DuckyDebugging.data.UserRoleRepository;
 import com.DuckyDebugging.models.UserAccount;
 
 
@@ -10,13 +12,16 @@ import java.sql.Timestamp;
 
 
 public class UserAccountMapper implements RowMapper<UserAccount> {
+
+
     @Override
     public UserAccount mapRow(ResultSet resultSet, int i) throws SQLException {
+
         UserAccount userAccount = new UserAccount();
         userAccount.setUserAccount_id(resultSet.getInt("userAccount_id"));
         userAccount.setUsername(resultSet.getString("username"));
         userAccount.setEmail(resultSet.getString("email"));
-        userAccount.setPassword(resultSet.getString("password"));
+        //userAccount.setPassword(resultSet.getString("password"));
         userAccount.setPhone(resultSet.getString("phone"));
         userAccount.setAddress(resultSet.getString("address"));
         userAccount.setAvatar(resultSet.getString("avatar"));
@@ -26,6 +31,9 @@ public class UserAccountMapper implements RowMapper<UserAccount> {
         userAccount.setAccountCreation_date(resultSet.getTimestamp("accountCreation_date"));
         userAccount.setDesignation(resultSet.getString("designation"));
         userAccount.setBio(resultSet.getString("bio"));
+        UserRoleMapper userRoleMapper = new UserRoleMapper();
+        userAccount.setUserRole(userRoleMapper.mapRow(resultSet, i));
+
 
         return  userAccount;
     }

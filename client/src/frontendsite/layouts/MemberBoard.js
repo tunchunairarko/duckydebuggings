@@ -1,6 +1,6 @@
 
-import React, { Fragment } from 'react'
-import { Col, Container, Row, Button, Image, InputGroup, FormControl } from 'react-bootstrap'
+import React from 'react'
+import { Col, Container, Row} from 'react-bootstrap'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import '../components/assets/style.css'
@@ -12,7 +12,7 @@ import MemberCard from '../components/Cards/MemberCard'
 
 export default function MemberBoard() {
     return (
-        <Fragment>
+        <main className='front-end-main'>
             <Header></Header>
             <Container className='padding-r-l-75'>
 
@@ -36,6 +36,6 @@ export default function MemberBoard() {
 
             </Container>
             <Footer></Footer>
-        </Fragment>
+        </main>
     )
 }

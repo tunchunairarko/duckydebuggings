@@ -1,5 +1,5 @@
 
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Col, Container, Row, Button, Image, InputGroup, FormControl } from 'react-bootstrap'
 import Header from '../components/Header/Header'
 import Tedt from '../components/assets/home-page-slider.png'
@@ -18,7 +18,7 @@ import DuckAvatar1 from '../components/assets/duck-avatar-1.png'
 
 export default function Home() {
     return (
-        <Fragment>
+        <main className='front-end-main'>
             <Header></Header>
             <Container className='padding-r-l-75'>
                 <Row className='bottom-margin-8-rem'>
@@ -89,6 +89,6 @@ export default function Home() {
                 </Row>
             </Container>
             <Footer></Footer>
-        </Fragment>
+        </main>
     )
 }

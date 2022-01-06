@@ -118,16 +118,15 @@ body h5{
     padding-left: 10%!important;
     padding-right: 10%!important;
 } */
-#root{
+.front-end-main{
     background-color: rgba(142, 197, 252, 0.123);
-    background-image: linear-gradient(75deg, #8ec5fc2d 0%, #e0c3fc1e 56%, #b0c8fb13 99%);
-    
+    background-image: repeating-linear-gradient(75deg, #8ec5fc2d 0%, #e0c3fc1e 56%, #b0c8fb13 99%);
 }
 
 
 
 h1,h2,h3{
-background: -webkit-linear-gradient(315deg, #4158d0 0%, #E0C3FC 100%);
+    background: -webkit-linear-gradient(315deg, #4158d0 0%, #E0C3FC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -214,5 +213,22 @@ background: -webkit-linear-gradient(315deg, #4158d0 0%, #E0C3FC 100%);
 }
 
 .dotted-hr{
-    border-top: 2px dotted red;
+    border-top: 3px dotted red;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.blogpost-title{
+    background: -webkit-linear-gradient(315deg, #000000 0%, #000000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px 20px;
+}
+
+.blogpost-title-col{
+    background-image: url(https://i.imgur.com/JNes3J4.jpeg);
+}
+
+:is(.front-end-main) .custom-a{
+    color:#c0392b!important;
+    text-decoration: none;
 }

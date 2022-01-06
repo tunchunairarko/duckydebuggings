@@ -1,28 +1,21 @@
 
-import React, { Fragment } from 'react'
-import { Col, Container, Row, Button, Image, InputGroup, FormControl } from 'react-bootstrap'
+import React from 'react'
+import { Col, Container, Row, Image, Card } from 'react-bootstrap'
 import Header from '../components/Header/Header'
-import Tedt from '../components/assets/home-page-slider.png'
-import Clients from '../components/assets/Clients.png'
 import Footer from '../components/Footer/Footer'
 import '../components/assets/style.css'
-import { FaSearch } from 'react-icons/fa'
-import { IoChevronForwardCircleOutline } from 'react-icons/io5'
-import FeatureCards from '../components/Cards/FeatureCards'
-import { FcBullish, FcQuestions, FcComboChart } from 'react-icons/fc'
-import HomePageMemberCard from '../components/Cards/HomePageMemberCard'
-import DuckAvatar1 from '../components/assets/duck-avatar-1.png'
+
 
 
 
 
 export default function CaseStudy() {
     return (
-        <Fragment>
+        <main className='front-end-main'>
             <Header></Header>
             <Container className='padding-r-l-75'>
-                <Row >
-                    <Col sm="12">
+                <Row className='text-align-center'>
+                    <Col sm="12" >
                         <Image src='https://i.imgur.com/JNes3J4.jpeg' fluid />
                         <hr className='dotted-hr' />
                     </Col>
@@ -33,6 +26,8 @@ export default function CaseStudy() {
                         <Image src="https://i.imgur.com/jCtHEIC.png" />
                         <hr className='dotted-hr' />
                     </Col>
+                </Row>
+                <Row>
                     <Col sm="9">
                         <h3>
                             Brief
@@ -82,8 +77,12 @@ export default function CaseStudy() {
                         </Card>
                     </Col>
                 </Row>
+                <hr className='dotted-hr' />
+                <Row className="case-study-body">
+                    body
+                </Row>
             </Container>
             <Footer></Footer>
-        </Fragment>
+        </main>
     )
 }
