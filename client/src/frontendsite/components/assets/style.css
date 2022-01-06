@@ -1,11 +1,12 @@
 body{
     font-family: 'Nunito', sans-serif!important;
-    color: #5a6980!important;
-    
+    color: #5a6980!important;    
 }
+
 body p{
     font-size: 0.75rem;
 }
+
 body h1{
     font-weight: 900;
     font-size: 5vw;
@@ -72,6 +73,7 @@ body h5{
     .dashboard-card-img{
         max-width: 40%!important;;
     }
+
     .featured-post-card-title{
         font-size: 0.875rem!important;
         font-weight: 700!important;
@@ -79,7 +81,9 @@ body h5{
     .featured-post-card-subtitle{
         font-size: 0.75rem!important;
     }
+
 }
+
 @media (min-width: 319px) and (max-width: 1280px) {
     .dashboard-card-title{
         font-size:1.2em!important;
@@ -93,13 +97,6 @@ body h5{
     .dashboard-card-footer{
         padding-right:10px!important;
         padding-left:10px!important;
-    }
-    .featured-post-card-title{
-        font-size: 0.875rem!important;
-        font-weight: 700!important;
-    }
-    .featured-post-card-subtitle{
-        font-size: 0.75rem!important;
     }
   }
 
@@ -161,13 +158,21 @@ background: -webkit-linear-gradient(315deg, #4158d0 0%, #E0C3FC 100%);
 :is(.member-card) p{
     font-size: 0.875vw!important;
 }
-/* .member-card{
-    height:350px;
-} */
 
 .view-member-btn{
     border-radius: 0px!important;
 }
+
+
+.card {
+    background-color:none!important;
+    border: none !important;
+}
+.card-img {
+    border-radius: 20px!important;
+}
+.card-body {
+    background-color:none!important;
 
 .individual-breadcrumb-row{
     background-image: url('/src/frontendsite/components/assets/IndividualBackground.jpg');
@@ -177,6 +182,7 @@ background: -webkit-linear-gradient(315deg, #4158d0 0%, #E0C3FC 100%);
     border-radius: 12px;
     min-height: 180px;
 }
+  
 .individual-profile-identity{
     top:150px;
     left: 35px;
@@ -215,4 +221,5 @@ background: -webkit-linear-gradient(315deg, #4158d0 0%, #E0C3FC 100%);
 
 .dotted-hr{
     border-top: 2px dotted red;
+
 }

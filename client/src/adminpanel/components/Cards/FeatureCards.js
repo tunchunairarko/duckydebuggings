@@ -23,6 +23,4 @@ export default function FeatureCards({title,text,link, linkText,icon}) {
             </Card>
         </Fragment>
     )
-
 }
-
