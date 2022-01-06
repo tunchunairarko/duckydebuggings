@@ -5,6 +5,10 @@ import Header from '../../components/Header/Header'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import {FaBars} from 'react-icons/fa'
 import '../../assets/admin-panel.scss'
+import RegisterNewUser from '../../components/RegForm/RegistrationForm'
+
+
+import AvailabilityCalender from '../../components/Calender/AvailabilityCalender'
 
 export default function Dashboard() {
     const [collapsed] = useState(false);
@@ -30,8 +34,10 @@ export default function Dashboard() {
                         <FaBars />
                     </div>
                     <Header />
-                    <Container fluid>
-                        Hello
+                    <Container fluid>                    
+                        <AvailabilityCalender/>
+                        {/* <RegisterNewUser /> */}
+
                     </Container>
                 </main>
             </div>

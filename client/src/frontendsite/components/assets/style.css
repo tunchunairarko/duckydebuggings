@@ -173,6 +173,7 @@ background: -webkit-linear-gradient(315deg, #4158d0 0%, #E0C3FC 100%);
 }
 .card-body {
     background-color:none!important;
+}
 
 .individual-breadcrumb-row{
     background-image: url('/src/frontendsite/components/assets/IndividualBackground.jpg');
