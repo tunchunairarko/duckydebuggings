@@ -1,11 +1,11 @@
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Row, Col, Form } from "react-bootstrap";
 import CustomButton from "../CustomButtons/CustomButton";
 
 const AvailabilityCalender = () => {
   return (
     <>
-      <Form>
-        <Form.Group className="mt-3">
+      <Form className="p-3">
+        <Form.Group>
           <Form.Label>Select Member:</Form.Label>
           <Form.Select aria-label="Default select example">
             <option>Please select a member</option>
@@ -35,14 +35,7 @@ const AvailabilityCalender = () => {
             </Col>
           </Row>
         </Form.Group>
-
-        <Container fluid>
-          <Row className="text-end">
-            <Col>
-              <CustomButton title="Submit" />
-            </Col>
-          </Row>
-        </Container>
+        <CustomButton size="lg" title="Submit" />        
       </Form>
     </>
   );
