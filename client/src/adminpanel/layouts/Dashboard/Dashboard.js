@@ -35,8 +35,8 @@ export default function Dashboard() {
                     </div>
                     <Header />
                     <Container fluid>                    
-                        <AvailabilityCalender/>
-                        {/* <RegisterNewUser /> */}
+                        {/* <AvailabilityCalender/>
+                        <RegisterNewUser /> */}
 
                     </Container>
                 </main>

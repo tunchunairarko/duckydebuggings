@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import {FaBars} from 'react-icons/fa'
 import '../../assets/admin-panel.scss'
+import RegisterNewUser from '../../components/RegForm/RegistrationForm'
 
 export default function CreateMember() {
     const [collapsed] = useState(false);
@@ -31,7 +32,7 @@ export default function CreateMember() {
                     </div>
                     <Header />
                     <Container fluid>
-                        Hello
+                        <RegisterNewUser/>
                     </Container>
                 </main>
             </div>

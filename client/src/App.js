@@ -9,6 +9,13 @@ import MemberBoard from "./frontendsite/layouts/MemberBoard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import IndividualMember from "./frontendsite/layouts/IndividualMember";
 import Dashboard from "./adminpanel/layouts/Dashboard/Dashboard";
+import ManageMember from "./adminpanel/layouts/Manage/ManageRoles";
+import CreateMember from "./adminpanel/layouts/Members/CreateMember";
+import ManagePosts from "./adminpanel/layouts/Post/ManagePosts";
+import CreateNewPost from "./adminpanel/layouts/Post/CreateNewPost";
+import Categories from "./adminpanel/layouts/Post/Categories";
+import ChangeAvailability from "./adminpanel/layouts/Profile/ChangeAvailability";
+
 
 
 export default function App() {
@@ -29,6 +36,13 @@ export default function App() {
             <Route path="/our-members" element={<MemberBoard/>} />
             <Route path="/members/12345" element={<IndividualMember/>} />
             <Route path="/" element={<Dashboard />} />
+            <Route path="/admin/members/" element={<ManageMember />} />
+            <Route path="/admin/members/new" element={<CreateMember />} />
+            <Route path="/admin/posts/" element={<ManagePosts />} />
+            <Route path="/admin/posts/new" element={<CreateNewPost />} />
+            <Route path="/admin/categories/" element={<Categories />} />
+            <Route path="/admin/categories/" element={<Categories />} />
+            <Route path="/admin/availability/" element={<ChangeAvailability />} />
             {/* <PublicRoute restricted={true} component={ComponentTest} path="/" exact /> */}
             {/* <PublicRoute restricted={true} component={Home} path="/" exact />
             <PublicRoute restricted={true} component={About} path="/about-us" exact />
