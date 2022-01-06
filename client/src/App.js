@@ -4,6 +4,12 @@ import Axios from "axios";
 import UserContext from "./context/UserContext";
 import ComponentTest from './ComponentTest';
 import PublicRoute from './router/PublicRoute'
+import Home from "./frontendsite/layouts/Home";
+import MemberBoard from "./frontendsite/layouts/MemberBoard";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import IndividualMember from "./frontendsite/layouts/IndividualMember";
+import Dashboard from "./adminpanel/layouts/Dashboard/Dashboard";
+
 
 export default function App() {
   const [userData, setUserData] = useState({
@@ -13,11 +19,16 @@ export default function App() {
 
   return (
     <Fragment>
+      
       <BrowserRouter>
         <UserContext.Provider value={{ userData, setUserData }}>
           <Routes>
             {/*THE FRONT END WEBSITE SECTION*/}
-            <Route path="/" element={<PublicRoute restricted={true} component={ComponentTest} path="/" exact />} />
+            {/* <Route path="/" element={<PublicRoute restricted={true} component={Home} path="/" exact />} /> */}
+            <Route path="/a" element={<Home/>} />
+            <Route path="/our-members" element={<MemberBoard/>} />
+            <Route path="/members/12345" element={<IndividualMember/>} />
+            <Route path="/" element={<Dashboard />} />
             {/* <PublicRoute restricted={true} component={ComponentTest} path="/" exact /> */}
             {/* <PublicRoute restricted={true} component={Home} path="/" exact />
             <PublicRoute restricted={true} component={About} path="/about-us" exact />

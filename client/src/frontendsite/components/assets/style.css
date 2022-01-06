@@ -1,6 +1,10 @@
 body{
     font-family: 'Nunito', sans-serif!important;
-    color: #5a6980!important;
+    color: #5a6980!important;    
+}
+
+body p{
+    font-size: 0.75rem;
 }
 
 body h1{
@@ -69,7 +73,17 @@ body h5{
     .dashboard-card-img{
         max-width: 40%!important;;
     }
+
+    .featured-post-card-title{
+        font-size: 0.875rem!important;
+        font-weight: 700!important;
+    }
+    .featured-post-card-subtitle{
+        font-size: 0.75rem!important;
+    }
+
 }
+
 @media (min-width: 319px) and (max-width: 1280px) {
     .dashboard-card-title{
         font-size:1.2em!important;
@@ -144,9 +158,11 @@ background: -webkit-linear-gradient(315deg, #4158d0 0%, #E0C3FC 100%);
 :is(.member-card) p{
     font-size: 0.875vw!important;
 }
+
 .view-member-btn{
     border-radius: 0px!important;
 }
+
 
 .card {
     background-color:none!important;
@@ -157,4 +173,53 @@ background: -webkit-linear-gradient(315deg, #4158d0 0%, #E0C3FC 100%);
 }
 .card-body {
     background-color:none!important;
+
+.individual-breadcrumb-row{
+    background-image: url('/src/frontendsite/components/assets/IndividualBackground.jpg');
+    background-size: auto;
+    padding: 20px 0px 0px 20px;
+    color:#fff;
+    border-radius: 12px;
+    min-height: 180px;
+}
+  
+.individual-profile-identity{
+    top:150px;
+    left: 35px;
+    z-index: 10;
+    position: absolute;
+    border-radius: 12px;
+    background-color: #ebececd3;
+    padding: 10px 20px;
+    max-width: 95%;
+}
+.top-margin-8rem{
+    margin-top:8rem!important;
+}
+
+.position-relative{
+    position: relative;
+}
+
+.individual-profile-buttons{
+    margin-right: 10px;
+}
+
+.align-right{
+    text-align: end;
+}
+
+.margin-top-1rem{
+    margin-top: 1.5rem!important;
+}
+
+.featured-post-cards{
+    background-color: rgba(255, 255, 255, 0)!important;
+    border: none!important;
+    box-shadow: none!important;
+}
+
+.dotted-hr{
+    border-top: 2px dotted red;
+
 }

@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import ComponentTest from './ComponentTest';
+
+// import ComponentTest from './ComponentTest';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <ComponentTest />
+    {/* <ComponentTest /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
