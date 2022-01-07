@@ -31,7 +31,7 @@ export default function ManageRoles() {
                     </div>
                     <Header />
                     <Container fluid>
-                        Hello
+                        Manage Roles Page
                     </Container>
                 </main>
             </div>

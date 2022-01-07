@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import "../assets/style.css"
+import "../../assets/style.css"
 import {IoIosEye} from 'react-icons/io'
 
 const ViewButton = ({ type, title, onClick }) => {

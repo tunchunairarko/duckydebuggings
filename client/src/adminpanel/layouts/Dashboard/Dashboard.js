@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import "../../assets/style.css" //custom css
 import { Container } from 'react-bootstrap'
+import Image from 'react-bootstrap/Image'
 import Header from '../../components/Header/Header'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import {FaBars} from 'react-icons/fa'
 import '../../assets/admin-panel.scss'
 import RegisterNewUser from '../../components/RegForm/RegistrationForm'
-
-
 import AvailabilityCalender from '../../components/Calender/AvailabilityCalender'
 
 export default function Dashboard() {
@@ -33,12 +32,11 @@ export default function Dashboard() {
                     <div className="sidebar-main-btn-toggle  btn-toggle" onClick={() => handleToggleSidebar(true)}>
                         <FaBars />
                     </div>
-                    <Header />
-                    <Container fluid>                    
-                        {/* <AvailabilityCalender/>
-                        <RegisterNewUser /> */}
+                        <Header />          
+                        
+                        <Image src="https://www.datapine.com/images/it-dashboards-datapine.png" />
 
-                    </Container>
+                   
                 </main>
             </div>
         </>

@@ -9,12 +9,13 @@ import MemberBoard from "./frontendsite/layouts/MemberBoard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import IndividualMember from "./frontendsite/layouts/IndividualMember";
 import Dashboard from "./adminpanel/layouts/Dashboard/Dashboard";
-import ManageMember from "./adminpanel/layouts/Manage/ManageRoles";
+import ManageMember from "./adminpanel/layouts/Members/ManageMember";
 import CreateMember from "./adminpanel/layouts/Members/CreateMember";
 import ManagePosts from "./adminpanel/layouts/Post/ManagePosts";
 import CreateNewPost from "./adminpanel/layouts/Post/CreateNewPost";
 import Categories from "./adminpanel/layouts/Post/Categories";
 import ChangeAvailability from "./adminpanel/layouts/Profile/ChangeAvailability";
+import ManageRoles from "./adminpanel/layouts/Manage/ManageRoles"
 
 
 
@@ -33,6 +34,7 @@ export default function App() {
             {/*THE FRONT END WEBSITE SECTION*/}
             {/* <Route path="/" element={<PublicRoute restricted={true} component={Home} path="/" exact />} /> */}
             <Route path="/a" element={<Home/>} />
+            <Route path="/admin/dashboard" element={<Dashboard/>} />
             <Route path="/our-members" element={<MemberBoard/>} />
             <Route path="/members/12345" element={<IndividualMember/>} />
             <Route path="/" element={<Dashboard />} />
@@ -43,6 +45,7 @@ export default function App() {
             <Route path="/admin/categories/" element={<Categories />} />
             <Route path="/admin/categories/" element={<Categories />} />
             <Route path="/admin/availability/" element={<ChangeAvailability />} />
+            <Route path="/admin/manageroles/" element={<ManageRoles />} />
             {/* <PublicRoute restricted={true} component={ComponentTest} path="/" exact /> */}
             {/* <PublicRoute restricted={true} component={Home} path="/" exact />
             <PublicRoute restricted={true} component={About} path="/about-us" exact />

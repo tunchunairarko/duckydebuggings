@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import {FaBars} from 'react-icons/fa'
 import '../../assets/admin-panel.scss'
+import NewPostForm from '../../components/Forms/NewPostForm'
 
 export default function CreateNewPost() {
     const [collapsed] = useState(false);
@@ -31,7 +32,9 @@ export default function CreateNewPost() {
                     </div>
                     <Header />
                     <Container fluid>
-                        Hello
+                        
+                        <NewPostForm/>
+
                     </Container>
                 </main>
             </div>
