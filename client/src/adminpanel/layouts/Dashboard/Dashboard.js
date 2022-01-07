@@ -34,7 +34,7 @@ export default function Dashboard() {
                     </div>
                         <Header />          
                         
-                        <Image src="https://www.datapine.com/images/it-dashboards-datapine.png" />
+                        
 
                    
                 </main>
