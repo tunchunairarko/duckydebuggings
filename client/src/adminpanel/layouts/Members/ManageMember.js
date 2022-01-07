@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "../../assets/style.css" //custom css
-import { Container } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
 import Header from '../../components/Header/Header'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import {FaBars} from 'react-icons/fa'
@@ -31,11 +31,11 @@ export default function ManageMember() {
                         <FaBars />
                     </div>
                     <Header />
-                    <Container fluid>
-
-                        <MemberCards/>
+                    
+                    <Row className="justify-content-center">Our Members</Row>
+                        <MemberCards />
                         
-                    </Container>
+                    
                 </main>
             </div>
         </>
