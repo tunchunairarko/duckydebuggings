@@ -1,19 +1,18 @@
 
 import React, { Fragment, useState, useEffect } from 'react'
-import { Container, Button, Form, Jumbotron } from 'react-bootstrap'
+import { Container, Button, Form, Row } from 'react-bootstrap'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import '../components/assets/style.css'
-
-
-
-
+import { useAlert } from 'react-alert';
 
 export default function Login() {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-    const [error, setError] = useState()
+    const [errorNotice, setErrorNotice] = useState()
     const [successNotice, setSuccessNotice] = useState()
+    const alert = useAlert()
+
     useEffect(() => {
         if (successNotice) {
             alert.success(<div style={{ 'fontSize': '0.70em' }}>{successNotice}</div>)
@@ -22,24 +21,24 @@ export default function Login() {
     }, [successNotice])
 
     useEffect(() => {
-        if (error) {
-            alert.error(<div style={{ 'fontSize': '0.70em' }}>{error}</div>)
-            setError(undefined)
+        if (errorNotice) {
+            alert.error(<div style={{ 'fontSize': '0.70em' }}>{errorNotice}</div>)
+            setErrorNotice(undefined)
         }
-    }, [error])
+    }, [errorNotice])
 
     return (
         <main className='front-end-main'>
             <Header></Header>
             <Container className='padding-r-l-75 login-form'>
-                <Jumbotron>
-                    {error && (
-                        <ErrorNotice message={error} clearError={() => setError(undefined)} />
-                    )}
+                <Row>
+                    {/* {errorNotice && (
+                        <ErrorNotice message={errorNotice} clearError={() => setError(undefined)} />
+                    )} */}
                     <h1>
                         User Login
                     </h1>
-                    <Form onSubmit={submit}>
+                    <Form >
                         <Form.Group controlId="formUserName">
                             <Form.Label>User name</Form.Label>
                             <Form.Control type="text" placeholder="Enter username" onChange={(e) => setUsername(e.target.value)} />
@@ -56,7 +55,7 @@ export default function Login() {
                             Login
                         </Button>
                     </Form>
-                </Jumbotron>
+                </Row>
             </Container>
             <Footer></Footer>
         </main>

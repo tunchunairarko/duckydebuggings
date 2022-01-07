@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import "../../assets/style.css" //custom css
-import { Container } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
 import Header from '../../components/Header/Header'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import {FaBars} from 'react-icons/fa'
 import '../../assets/admin-panel.scss'
+import MemberCards from '../../components/Cards/MemberCards'
 
 export default function ManageMember() {
     const [collapsed] = useState(false);
@@ -30,9 +31,11 @@ export default function ManageMember() {
                         <FaBars />
                     </div>
                     <Header />
-                    <Container fluid>
-                        Hello
-                    </Container>
+                    
+                    <Row className="justify-content-center">Our Members</Row>
+                        <MemberCards />
+                        
+                    
                 </main>
             </div>
         </>

@@ -17,6 +17,7 @@ import Categories from "./adminpanel/layouts/Post/Categories";
 import ChangeAvailability from "./adminpanel/layouts/Profile/ChangeAvailability";
 import CaseStudy from './frontendsite/layouts/CaseStudy'
 import About from "./frontendsite/layouts/About";
+import Login from "./frontendsite/layouts/Login";
 
 
 
@@ -34,16 +35,18 @@ export default function App() {
           <Routes>
             {/*THE FRONT END WEBSITE SECTION*/}
             {/* <Route path="/" element={<PublicRoute restricted={true} component={Home} path="/" exact />} /> */}
-            <Route path="/a" element={<CaseStudy/>} />
+            <Route path="/login" element={<Login/>} />
             <Route path="/about-us" element={<About/>} />
             <Route path="/our-members" element={<MemberBoard/>} />
-            <Route path="/members/12345" element={<IndividualMember/>} />
+            <Route path="/members/:memberId" element={<IndividualMember/>} />
             <Route path="/" element={<Home />} />
+            <Route path="/case-study/1" element={<CaseStudy />} />
+            <Route path="/admin/dashboard/" element={<Dashboard />} />
             <Route path="/admin/members/" element={<ManageMember />} />
             <Route path="/admin/members/new" element={<CreateMember />} />
+            
             <Route path="/admin/posts/" element={<ManagePosts />} />
             <Route path="/admin/posts/new" element={<CreateNewPost />} />
-            <Route path="/admin/categories/" element={<Categories />} />
             <Route path="/admin/categories/" element={<Categories />} />
             <Route path="/admin/availability/" element={<ChangeAvailability />} />
             {/* <PublicRoute restricted={true} component={ComponentTest} path="/" exact /> */}

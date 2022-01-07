@@ -77,7 +77,7 @@ export default function Sidebar({ collapsed, toggled, handleToggleSidebar }) {
                 </Menu>
                 <Menu iconShape="square">
                     <MenuItem icon={<FaGem />}>
-                        <Link className="nav-link" to={`/admin/dashboard`}>
+                        <Link className="nav-link" to={`/admin/manageroles`}>
                             Manage user roles
                         </Link>
                     </MenuItem>

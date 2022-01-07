@@ -40,7 +40,7 @@ export default function Header() {
                         <Nav.Link>
                             Hello Guest!
                         </Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
+                        <Nav.Link eventKey={2} href="/login">
                             Log in
                         </Nav.Link>
                         {/* <Nav.Link eventKey={3} href="#memes" className="btn btn-responsive btn-light" style={{color:'inherit'}}>

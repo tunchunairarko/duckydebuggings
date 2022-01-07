@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Col, Container, Row, Button, Image, InputGroup, FormControl } from 'react-bootstrap'
 import Header from '../components/Header/Header'
 import Tedt from '../components/assets/home-page-slider.png'
@@ -12,11 +12,44 @@ import FeatureCards from '../components/Cards/FeatureCards'
 import { FcBullish, FcQuestions, FcComboChart } from 'react-icons/fc'
 import HomePageMemberCard from '../components/Cards/HomePageMemberCard'
 import DuckAvatar1 from '../components/assets/duck-avatar-1.png'
-
-
+import Axios from "axios";
+import { Link } from 'react-router-dom'
 
 
 export default function Home() {
+    const [members, setMembers] = useState([])
+
+    const apiUrl = "http://localhost:8080"
+
+    useEffect(() => {
+        const compMount = async () => {
+            try {
+                const userRes = await Axios.get(
+                    // "/api/products/"+cookies.username,
+                    apiUrl + "/api/basicUsers/",
+
+                )
+                console.log(userRes)
+                for (var i = 0; i < userRes.data.length; i++) {
+                    let joiningDate = new Date(userRes.data[i].accountCreation_date)
+                    joiningDate = (joiningDate.toLocaleString('default', { month: 'short' })) + " " + (joiningDate.getUTCFullYear())
+                    userRes.data[i].joiningDate = joiningDate
+                    userRes.data[i].skills = userRes.data[i].skills.replace(/,/g, " . ")
+                }
+                setMembers(userRes.data)
+
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        compMount()
+    }, [])
+    // useEffect(() => {
+    //     if (errorNotice) {
+    //         alert.error(<div style={{ 'fontSize': '0.70em' }}>{errorNotice}</div>)
+    //         setErrorNotice(undefined)
+    //     }
+    // }, [errorNotice])
     return (
         <main className='front-end-main'>
             <Header></Header>
@@ -68,7 +101,8 @@ export default function Home() {
                         <h2 className="text-align-center">Our Members</h2>
                         <p className="text-align-center">Search for freelancers by skill, location, or just browse for inspiration and camaraderie.</p>
                     </Col>
-                    <Col sm="4" className='mt-2 mb-2'>
+
+                    {/* <Col sm="4" className='mt-2 mb-2'>
                         <HomePageMemberCard title="username1" value="May 2021 . python . Django " image={DuckAvatar1}/>
                     </Col>
                     <Col sm="4" className='mt-2 mb-2'>
@@ -85,8 +119,16 @@ export default function Home() {
                     </Col>
                     <Col sm="4" className='mt-2 mb-2'>
                         <HomePageMemberCard title="username1" value="May 2021 . python . Django " image={DuckAvatar1}/>
-                    </Col>
-                    <Col sm="12" style={{textAlign:'center'}}>
+                    </Col> */}
+                    {members.map(member => (
+                        <Col sm="4" className='mt-2 mb-2'>
+                            <Link className='home-page-member-card-link' to={"/members/"+member.userAccount_id}>
+                                <HomePageMemberCard title={member.username} value={member.joiningDate + " . " + member.skills} image={member.avatar} />
+                            </Link>
+                        </Col>
+                    ))}
+
+                    <Col sm="12" style={{ textAlign: 'center' }}>
                         <Button variant="info" className='home-view-all-button' href="/our-members">
                             View All
                         </Button>

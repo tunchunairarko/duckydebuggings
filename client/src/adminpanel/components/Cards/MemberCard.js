@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
-import '../assets/style.css'
+import '../../assets/style.css'
 import ViewButton from "../Buttons/ViewButton";
 import {IoCalendar} from 'react-icons/io5'
 

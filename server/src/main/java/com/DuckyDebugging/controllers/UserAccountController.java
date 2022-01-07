@@ -18,18 +18,19 @@ public class UserAccountController {
         this.service = service;
     }
 
-
+    @CrossOrigin(origins = "*")
     @GetMapping
     public List<UserAccount> findAll() {
         return service.findAll();
     }
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/{userAccountId}")
     public UserAccount findById(@PathVariable int userAccountId) {
         return service.findById(userAccountId);
     }
 
-
+    @CrossOrigin(origins = "*")
     @PostMapping("/login")
     public ResponseEntity<UserAccount> findByCredentials(@RequestBody UserAccount account) {
         UserAccount userAccount = service.findByCredentials(account.getUsername() , account.getPassword());

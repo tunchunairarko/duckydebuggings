@@ -183,6 +183,7 @@ h1,h2,h3{
     color:#fff;
     border-radius: 12px;
     min-height: 180px;
+    margin-top:1rem!important;
 }
 .individual-profile-identity{
     top:150px;
@@ -191,13 +192,16 @@ h1,h2,h3{
     position: absolute;
     border-radius: 12px;
     background-color: #ebececd3;
-    padding: 10px 20px;
-    max-width: 95%;
+    padding: 10px 10px;
+    width: 95%;
 }
 .top-margin-8rem{
     margin-top:8rem!important;
 }
 
+.top-margin-2rem{
+    margin-top:2rem!important;
+}
 .position-relative{
     position: relative;
 }
@@ -322,4 +326,41 @@ h1,h2,h3{
     background-color: rgba(255,255,255,0)!important;
     border: 1px solid #4158d0!important;
     color:#4158d0!important;    
+}
+.btn-primary{
+    background-color: #4158d0!important;
+    border-color: #4158d0!important;
+}
+.member-card-bio {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}
+.member-card{
+    margin-bottom: 2rem;
+}
+
+.padding-top-06rem{
+    padding-top:0.6rem!important;
+}
+
+.skill-icon-member-page{
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+.case-carousel-cards{
+    margin-right:10px!important;
+}
+.card-group{
+    margin-bottom:5rem;
+}
+
+.featured-post-cards{
+    margin-bottom:10px;
+}
+.home-page-member-card-link{
+    text-decoration: none;
+    color:inherit;
 }
