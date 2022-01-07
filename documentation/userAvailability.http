@@ -1,0 +1,32 @@
+
+@url = http://localhost:8080/api/userAvailability
+
+
+#######
+GET {{url}} HTTP/1.1
+#######
+
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+  {
+    "userAcc_id":8,
+    "starting_date":"2018-11-11",
+    "ending_date":"2019-12-12"
+    
+    }
+################ 
+PUT {{url}}/3 HTTP/1.1
+Content-Type: application/json
+
+  {
+    "id":1,
+    "userAcc_id":8,
+    "starting_date":"2006-11-11",
+    "ending_date":"2006-12-12"
+    
+    }
+########
+
+DELETE {{url}}/7 HTTP/1.1
