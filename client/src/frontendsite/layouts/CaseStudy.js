@@ -7,8 +7,6 @@ import '../components/assets/style.css'
 
 
 
-
-
 export default function CaseStudy() {
     return (
         <main className='front-end-main'>
@@ -78,8 +76,53 @@ export default function CaseStudy() {
                     </Col>
                 </Row>
                 <hr className='dotted-hr' />
-                <Row className="case-study-body">
-                    body
+                <Row>
+                    <Col sm="12">
+                        <Image src="https://i.imgur.com/Yrft99T.png" fluid />
+                    </Col>
+                    <Col sm="9">
+                        <h3>
+                            Research & Analysis
+                        </h3>
+                        <p>
+                            From our research, we found most users had a neutral reaction to online banking. But those who used Simple or USAA, happily & positively described their banking experience. This directed us to look at these apps & tease out what they had that other banking apps lacked. What we found is that most apps had a neutral, cold tone to them; Simple & USAA both had an approachable, clear, guiding voice to their copy and features. This gave the user a sense of control over how they interacted with their bank. (See below for a specific example.)
+                        </p>
+
+                    </Col>
+                    <Col sm="3">
+                        <Card
+                            bg="danger"
+                            key="1"
+                            text="dark"
+                            style={{ width: '18rem' }}
+                            className="mb-2"
+                        >
+                            <Card.Header>Tools used</Card.Header>
+                            <Card.Body>
+                                <Card.Text>
+                                    <ul>
+                                        <li>User Survey (200 Responses)</li>
+                                        <li>User Interviews (11 Total)</li>
+                                        <li>Drafted Wireframes</li>
+                                        <li>Competitive Analysis</li>
+                                        <li>Comparative Analysis</li>
+                                    </ul>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col sm="12">
+                        <Image src="https://i.imgur.com/Yrft99T.png" fluid />
+                    </Col>
+                </Row>
+                <Row className="mt-2">
+                    <Col sm="9">
+                        <h3>Deliverable Design</h3>
+                        <p>Our finished design was well accepted by our client. They felt that we had stuck to the branding of the site, while having provided a clean product that met their business needs and kept the user at the center of the design process. One overall takeaway for me from this project was learning to work and communicate with team members and our project managers under time strenuous circumstances.</p>
+                    </Col>
+                    <Col sm="12">
+                        <Image src="https://i.imgur.com/oasoX96.png" fluid />
+                    </Col>
                 </Row>
             </Container>
             <Footer></Footer>

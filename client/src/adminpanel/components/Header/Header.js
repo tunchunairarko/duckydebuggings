@@ -8,7 +8,7 @@ export default function Header() {
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Nav-Bar</Navbar.Brand>
+                    <Navbar.Brand href="#home">Dashboard</Navbar.Brand>
                     {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
                     <Navbar.Collapse id="responsive-navbar-nav">
                         {/* <Nav className="me-auto">

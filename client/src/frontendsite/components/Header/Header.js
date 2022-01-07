@@ -30,17 +30,17 @@ export default function Header() {
                             </NavDropdown> */}
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="#pricing">Case Studies</Nav.Link>
+                            <Nav.Link href="/case-study/1">Case Studies</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="#pricing">Contact</Nav.Link>
+                            <Nav.Link href="/about-us">Contact</Nav.Link>
                         </Nav.Item>
                     </Nav>
                     <Nav>
                         <Nav.Link>
                             Hello Guest!
                         </Nav.Link>
-                        <Nav.Link eventKey={2} href="/login">
+                        <Nav.Link eventKey={2} href="/admin/dashboard">
                             Log in
                         </Nav.Link>
                         {/* <Nav.Link eventKey={3} href="#memes" className="btn btn-responsive btn-light" style={{color:'inherit'}}>

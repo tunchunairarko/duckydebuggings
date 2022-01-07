@@ -364,3 +364,7 @@ h1,h2,h3{
     text-decoration: none;
     color:inherit;
 }
+.dashboard-card-header{
+    background-color:  #0984e3!important;
+    color:#fff;
+}

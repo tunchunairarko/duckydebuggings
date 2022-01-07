@@ -3,7 +3,7 @@ import { Col, Container, Row, Button, Image } from 'react-bootstrap'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import '../components/assets/style.css'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import Axios from 'axios'
 import DuckAvatar from '../components/assets/duck-avatar-1.png'
 import FeaturePostCards from '../components/Cards/FeaturedPostCards'
@@ -144,9 +144,9 @@ export default function IndividualMember() {
                     </Col>
                     <Col sm="4">
                         <h5 style={{ fontWeight: 900 }}>Featured posts</h5>
-                        <FeaturePostCards title="Excellent project completed" value="May 2021 . python . Django " image={DuckAvatar1} />
-                        <FeaturePostCards title="Excellent project completed" value="May 2021 . python . Django " image={DuckAvatar1} />
-                        <FeaturePostCards title="Excellent project completed" value="May 2021 . python . Django " image={DuckAvatar1} />
+                        <Link to="/case-study/1"><FeaturePostCards title="Excellent project completed" value="May 2021 . python . Django " image={DuckAvatar1} /></Link>
+                        <Link to="/case-study/1"><FeaturePostCards title="Excellent project completed" value="May 2021 . python . Django " image={DuckAvatar1} /></Link>
+                        <Link to="/case-study/1"><FeaturePostCards title="Excellent project completed" value="May 2021 . python . Django " image={DuckAvatar1} /></Link>
                     </Col>
                 </Row>
                 <Row className="top-margin-2rem case-studies-carousel">
