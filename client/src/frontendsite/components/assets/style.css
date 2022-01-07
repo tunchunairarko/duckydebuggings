@@ -368,3 +368,8 @@ h1,h2,h3{
     background-color:  #0984e3!important;
     color:#fff;
 }
+
+.no-a-styling{
+    text-decoration: none!important;
+    color:#353535!important;
+}

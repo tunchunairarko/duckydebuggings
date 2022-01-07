@@ -144,9 +144,9 @@ export default function IndividualMember() {
                     </Col>
                     <Col sm="4">
                         <h5 style={{ fontWeight: 900 }}>Featured posts</h5>
-                        <Link to="/case-study/1"><FeaturePostCards title="Excellent project completed" value="May 2021 . python . Django " image={DuckAvatar1} /></Link>
-                        <Link to="/case-study/1"><FeaturePostCards title="Excellent project completed" value="May 2021 . python . Django " image={DuckAvatar1} /></Link>
-                        <Link to="/case-study/1"><FeaturePostCards title="Excellent project completed" value="May 2021 . python . Django " image={DuckAvatar1} /></Link>
+                        <Link className="no-a-styling" to="/case-study/1"><FeaturePostCards title="Excellent project completed" value="May 2021 . python . Django " image={DuckAvatar1} /></Link>
+                        <Link className="no-a-styling" to="/case-study/1"><FeaturePostCards title="Excellent project completed" value="May 2021 . python . Django " image={DuckAvatar1} /></Link>
+                        <Link className="no-a-styling" to="/case-study/1"><FeaturePostCards title="Excellent project completed" value="May 2021 . python . Django " image={DuckAvatar1} /></Link>
                     </Col>
                 </Row>
                 <Row className="top-margin-2rem case-studies-carousel">
