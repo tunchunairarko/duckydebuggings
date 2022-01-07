@@ -1,5 +1,6 @@
 package com.DuckyDebugging.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.sql.Timestamp;
@@ -11,6 +12,7 @@ public class UserDetailAccount {
     private int userAccount_id;
     private String username;
     private String email;
+    @JsonProperty( value = "password", access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     private String phone;
     private String address;
@@ -21,8 +23,8 @@ public class UserDetailAccount {
     private Timestamp accountCreation_date;
     private String designation;
     private String bio;
-    private int id;
-    private Date starting_date;
-    private Date ending_date;
+    private String roleName;
+    private UserRole userRole;
+    private UserAvailability userAvailability;
 
 }

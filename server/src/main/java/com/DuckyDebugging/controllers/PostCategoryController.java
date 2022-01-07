@@ -1,9 +1,9 @@
 package com.DuckyDebugging.controllers;
 
 import com.DuckyDebugging.models.UserAccount;
-import com.DuckyDebugging.models.UserRole;
+import com.DuckyDebugging.models.PostCategory;
 import com.DuckyDebugging.services.Result;
-import com.DuckyDebugging.services.UserRoleService;
+import com.DuckyDebugging.services.PostCategoryService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,29 +11,30 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/UserRole")
-public class UserRoleController {
-    private final UserRoleService service;
+@RequestMapping("/api/PostCategory")
+public class PostCategoryController {
+    private final PostCategoryService service;
 
-    public UserRoleController(UserRoleService service) {
+    public PostCategoryController(PostCategoryService service) {
         this.service = service;
     }
     @GetMapping("/{id}")
-    public ResponseEntity<UserRole> findById(@PathVariable int id){
-        UserRole userRole= service.findById(id);
-        if (userRole == null) {
+    public ResponseEntity<PostCategory> findById(@PathVariable int id){
+        PostCategory postCategory= service.findById(id);
+        if (postCategory == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        return ResponseEntity.ok(userRole);
+        return ResponseEntity.ok(postCategory);
     }
     @GetMapping
-    public List<UserRole> findAll() {
+    public List<PostCategory> findAll() {
         return service.findAll();
     }
 
+
     @PostMapping
-    public ResponseEntity<Object> add(@RequestBody UserRole  userRole) {
-        Result<UserRole> result = service.add(userRole);
+    public ResponseEntity<Object> add(@RequestBody PostCategory  postCategory) {
+        Result<PostCategory> result = service.add(postCategory);
         if (result.isSuccess()) {
             return new ResponseEntity<>(result.getPayload(), HttpStatus.CREATED);
         }
@@ -41,11 +42,11 @@ public class UserRoleController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Object> update(@PathVariable int id, @RequestBody UserRole userRole){
-        if (id != userRole.getUserRole_id()) {
+    public ResponseEntity<Object> update(@PathVariable int id, @RequestBody PostCategory postCategory){
+        if (id != postCategory.getPost_category_id()) {
             return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
-        Result<UserRole> result = service.update(userRole);
+        Result<PostCategory> result = service.update(postCategory);
         if (result.isSuccess()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
@@ -60,3 +61,4 @@ public class UserRoleController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }
+

@@ -1,6 +1,8 @@
 package com.DuckyDebugging.data;
 
+import com.DuckyDebugging.models.UserAccount;
 import com.DuckyDebugging.models.UserDetailAccount;
+import com.DuckyDebugging.models.UserRole;
 
 import java.util.List;
 
@@ -9,9 +11,6 @@ public interface UserDetailAccountRepository {
 
     UserDetailAccount findById(int id);
 
-    UserDetailAccount add(UserDetailAccount userDetailAccount);
+   UserRole findByName(String name);
 
-    boolean update(UserDetailAccount userDetailAccount);
-
-    boolean deleteById(int id);
 }

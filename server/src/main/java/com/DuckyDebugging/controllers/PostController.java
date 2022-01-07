@@ -28,6 +28,12 @@ public class PostController {
         return service.findById(postId);
     }
 
+    @GetMapping("/user/{userId}")
+    public List<Post>  findPostByUser(@PathVariable int userId) {
+        return service.findPostByUser(userId);
+    }
+
+
     @PostMapping
     public ResponseEntity<Object> add(@RequestBody Post post) {
         Result<Post> result = service.add(post);

@@ -25,6 +25,10 @@ public class PostService {
         return repository.findById(accountId);
     }
 
+    public List<Post> findPostByUser(int userId) {
+        return repository.findPostByUser(userId);
+    }
+
     public Result<Post> add(Post post) {
         Result<Post> result = validate(post);
         if (!result.isSuccess()) {

@@ -10,7 +10,6 @@ public class UserAccount {
     private int userAccount_id;
     private String username;
     private String email;
-    @JsonProperty( value = "password", access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     private String phone;
     private String address;

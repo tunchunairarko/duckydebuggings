@@ -1,20 +1,18 @@
 package com.DuckyDebugging.data;
 
-import com.DuckyDebugging.models.Post;
 import com.DuckyDebugging.models.PostCategory;
 import com.DuckyDebugging.models.UserRole;
 
 import java.util.List;
 
-public interface PostRepository {
-    List<Post> findAll();
+public interface PostCategoryRepository {
+    List<PostCategory> findAll();
 
-    Post findById(int id);
+    PostCategory findById(int id);
     PostCategory findByName(String name);
-    Post add(Post post);
-    List<Post> findPostByUser(int userId);
+    PostCategory add(PostCategory postCategory);
 
-    boolean update(Post post);
+    boolean update(PostCategory postCategory);
 
     boolean deleteById(int id);
 }

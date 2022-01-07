@@ -1,15 +1,17 @@
 package com.DuckyDebugging.controllers;
 
+import com.DuckyDebugging.models.UserAccount;
 import com.DuckyDebugging.models.UserDetailAccount;
-import com.DuckyDebugging.services.UserDetailAccountService;
+import com.DuckyDebugging.services.UserAccountService;
 import com.DuckyDebugging.services.Result;
+import com.DuckyDebugging.services.UserDetailAccountService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/api/detailedUsers")
+@RequestMapping("/api/userDetail")
 public class UserDetailAccountController {
 
     private final UserDetailAccountService service;
@@ -23,9 +25,11 @@ public class UserDetailAccountController {
         return service.findAll();
     }
 
-    @GetMapping("/{userDetailAccountId}")
-    public UserDetailAccount findById(@PathVariable int userDetailAccountId) {
-        return service.findById(userDetailAccountId);
+    @GetMapping("/{userAccountId}")
+    public UserDetailAccount findById(@PathVariable int userAccountId) {
+        return service.findById(userAccountId);
     }
 
+
 }
+

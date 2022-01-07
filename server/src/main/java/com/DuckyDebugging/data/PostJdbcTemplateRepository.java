@@ -29,7 +29,12 @@ public class PostJdbcTemplateRepository  implements PostRepository {
         final String sql = "select p.post_id,p.userAcc_id,p.post_title,p.post_short_description,p.post_featured_image,p.post_body,p.category_id,p.tags,pc.post_category_name,pc.post_category_id from post as p inner join post_category as pc on p.category_id=pc.post_category_id;";
         return jdbcTemplate.query(sql,new PostMapper());
     }
+    @Override
+    public List<Post> findPostByUser(int userId) {
 
+        final String sql = "select p.post_id,p.userAcc_id,p.post_title,p.post_short_description,p.post_featured_image,p.post_body,p.category_id,p.tags,pc.post_category_name,pc.post_category_id from post as p inner join post_category as pc on p.category_id=pc.post_category_id where p.userAcc_id=?;";
+        return jdbcTemplate.query(sql,new PostMapper(),userId);
+    }
     @Override
     public Post findById(int id) {
         final String sql = "select post_id,userAcc_id,post_title,post_short_description,post_featured_image,post_body,category_id,tags from post where post_id =?;";

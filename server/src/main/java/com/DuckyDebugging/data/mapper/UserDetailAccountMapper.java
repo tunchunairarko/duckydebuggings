@@ -14,7 +14,7 @@ public class UserDetailAccountMapper implements RowMapper<UserDetailAccount> {
         userDetailAccount.setUserAccount_id(resultSet.getInt("userAccount_id"));
         userDetailAccount.setUsername(resultSet.getString("username"));
         userDetailAccount.setEmail(resultSet.getString("email"));
-        userDetailAccount.setPassword(resultSet.getString("password"));
+//        userDetailAccount.setPassword(resultSet.getString("password"));
         userDetailAccount.setPhone(resultSet.getString("phone"));
         userDetailAccount.setAddress(resultSet.getString("address"));
         userDetailAccount.setAvatar(resultSet.getString("avatar"));
@@ -24,9 +24,12 @@ public class UserDetailAccountMapper implements RowMapper<UserDetailAccount> {
         userDetailAccount.setAccountCreation_date(resultSet.getTimestamp("accountCreation_date"));
         userDetailAccount.setDesignation(resultSet.getString("designation"));
         userDetailAccount.setBio(resultSet.getString("bio"));
-        userDetailAccount.setId(resultSet.getInt("id"));
-        userDetailAccount.setStarting_date(resultSet.getDate("starting_date"));
-        userDetailAccount.setEnding_date(resultSet.getDate("ending_date"));
+
+        UserRoleMapper userRoleMapper = new UserRoleMapper();
+        userDetailAccount.setUserRole(userRoleMapper.mapRow(resultSet, i));
+
+        UserAvailabilityMapper userAvailabilityMapper = new UserAvailabilityMapper();
+        userDetailAccount.setUserAvailability(userAvailabilityMapper.mapRow(resultSet, i));
 
         return  userDetailAccount;
     }
