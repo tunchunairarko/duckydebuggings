@@ -6,7 +6,7 @@ import {IoIosEye} from 'react-icons/io'
 const ViewButton = ({ type, title, onClick }) => {
   return (
     <>
-      <Button className="view-btn-color view-member-btn"
+      <Button className="view-btn-color view-member-btn "
         onClick={onClick}
         type={type}
         //variant={color}

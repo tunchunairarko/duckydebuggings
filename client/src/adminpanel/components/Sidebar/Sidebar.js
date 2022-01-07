@@ -52,24 +52,24 @@ export default function Sidebar({ collapsed, toggled, handleToggleSidebar }) {
                     </SubMenu>
                     <SubMenu title="Posts" icon={<FaHeart />}>
                         <MenuItem>
-                            <Link className="nav-link" to={`/admin/members/new`}>
+                            <Link className="nav-link" to={`/admin/posts/new`}>
                                 Create new posts
                             </Link>
                         </MenuItem>
                         <MenuItem>
-                            <Link className="nav-link" to={`/admin/members/`}>
+                            <Link className="nav-link" to={`/admin/posts/`}>
                                 Manage posts
                             </Link>
                         </MenuItem>
                     </SubMenu>
-                    <SubMenu title="Posts" icon={<FaHeart />}>
+                    <SubMenu title="Categories" icon={<FaHeart />}>
                         <MenuItem>
-                            <Link className="nav-link" to={`/admin/members/new`}>
+                            <Link className="nav-link" to={`/admin/categories/new`}>
                                 Create post categories
                             </Link>
                         </MenuItem>
                         <MenuItem>
-                            <Link className="nav-link" to={`/admin/members/`}>
+                            <Link className="nav-link" to={`/admin/categories/`}>
                                 Manage post categories
                             </Link>
                         </MenuItem>
@@ -88,7 +88,7 @@ export default function Sidebar({ collapsed, toggled, handleToggleSidebar }) {
                             </Link>
                         </MenuItem>
                         <MenuItem>
-                            <Link className="nav-link" to={`/admin/members/`}>
+                            <Link className="nav-link" to={`/admin/availability/`}>
                                 Manage availability
                             </Link>
                         </MenuItem>

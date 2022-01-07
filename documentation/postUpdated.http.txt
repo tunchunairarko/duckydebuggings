@@ -1,0 +1,41 @@
+@url = http://localhost:8080/api/posts
+@url2 = http://localhost:8080/api/posts/user
+#######
+GET {{url}} HTTP/1.1
+#######
+
+GET {{url2}}/4 HTTP/1.1
+
+#####
+
+POST {{url}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "userAcc_id":3,
+    "post_title":"post6",
+    "post_short_description":"this is short desciption of the post",
+    "post_featured_image":"this is url6",
+    "post_body":"this is body of post2. it is body of post2",
+    "categoryName":"case studies",
+    "tags":"post,post1,relatedpost"
+    
+  }
+
+#################
+PUT {{url}}/4 HTTP/1.1
+Content-Type: application/json
+
+  {
+    "post_id":4,
+    "post_title":"post4",
+    "post_short_description":"this is short desciption of the post",
+    "post_featured_image":"this is url2 chnged",
+    "post_body":"this is post body changed",
+    "tags":"post,post1,relatedpost"
+
+    }
+
+###
+
+DELETE {{url}}/6 HTTP/1.1

@@ -12,6 +12,7 @@ public interface PostRepository {
     Post findById(int id);
     PostCategory findByName(String name);
     Post add(Post post);
+    List<Post> findPostByUser(int userId);
 
     boolean update(Post post);
 

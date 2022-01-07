@@ -36,6 +36,17 @@ public class UserAccountJdbcTemplateRepository  implements UserAccountRepository
         final String sql = "select u.userAccount_id,u.username,u.email,u.phone,u.address,u.avatar,u.userRole_id,u.education,u.skills,u.accountCreation_date,u.designation,u.bio,ur.role_name from useraccount as u inner join user_role as ur on u.userRole_id=ur.userRole_id where u.userAccount_id =?;";
         return jdbcTemplate.query(sql,new UserAccountMapper(), id).stream().findAny().orElse(null);
     }
+
+    @Override
+    public UserAccount findByCredentials(String userName, String passWord){
+        final String sql = "select u.userAccount_id,u.username,u.email,u.phone,u.address,u.avatar,u.userRole_id,u.education,u.skills,u.accountCreation_date,u.designation,u.bio,ur.role_name from useraccount as u inner join user_role as ur on u.userRole_id=ur.userRole_id " +
+                "where u.username=? and u.password=?;";
+
+        return jdbcTemplate.query(sql, new UserAccountMapper(), userName, passWord).stream()
+                .findFirst()
+                .orElse(null);
+    }
+
     @Override
     public UserRole findByName(String name) {
         final String sql = "select * from user_role where role_name =?;";
@@ -51,7 +62,6 @@ public class UserAccountJdbcTemplateRepository  implements UserAccountRepository
         KeyHolder keyHolder = new GeneratedKeyHolder();
         int rowsAffected = jdbcTemplate.update(connection -> {
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-
             ps.setString(1, userAccount.getUsername());
             ps.setString(2, userAccount.getEmail());
             ps.setString(3, userAccount.getPassword());

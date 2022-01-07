@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import {FaBars} from 'react-icons/fa'
 import '../../assets/admin-panel.scss'
+import AvailabilityCalender from '../../components/Calender/AvailabilityCalender'
 
 export default function ChangeAvailability() {
     const [collapsed] = useState(false);
@@ -31,7 +32,7 @@ export default function ChangeAvailability() {
                     </div>
                     <Header />
                     <Container fluid>
-                        Hello
+                     <AvailabilityCalender/>
                     </Container>
                 </main>
             </div>

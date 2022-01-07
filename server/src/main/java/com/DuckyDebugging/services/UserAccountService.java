@@ -25,6 +25,10 @@ public class UserAccountService {
         return repository.findById(accountId);
     }
 
+    public UserAccount findByCredentials(String userName, String passWord) {
+        return repository.findByCredentials(userName, passWord);
+    }
+
     public Result<UserAccount> add(UserAccount userAccount) {
         Result<UserAccount> result = validate(userAccount);
         if (!result.isSuccess()) {

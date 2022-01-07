@@ -4,9 +4,9 @@ import Logo from '../assets/logo.png'
 
 export default function Header() {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light">
+        <Navbar collapseOnSelect expand="lg" className="front-site-header" variant="light">
             <Container>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                     <Image src={Logo} className="max-width-150" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -16,7 +16,7 @@ export default function Header() {
                             <Nav.Link href="/">Home</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="/">About us</Nav.Link>
+                            <Nav.Link href="/about-us">About us</Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>
@@ -37,13 +37,15 @@ export default function Header() {
                         </Nav.Item>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">Hello Guest!</Nav.Link>
+                        <Nav.Link>
+                            Hello Guest!
+                        </Nav.Link>
                         <Nav.Link eventKey={2} href="#memes">
                             Log in
                         </Nav.Link>
-                        <Nav.Link eventKey={3} href="#memes" className="btn btn-responsive btn-primary" style={{color:'#fff'}}>
+                        {/* <Nav.Link eventKey={3} href="#memes" className="btn btn-responsive btn-light" style={{color:'inherit'}}>
                             Sign up
-                        </Nav.Link>
+                        </Nav.Link> */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

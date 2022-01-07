@@ -1,0 +1,57 @@
+@url = http://localhost:8080/api/basicUsers
+
+
+#######
+GET {{url}} HTTP/1.1
+#######
+
+
+PUT {{url}}/7 HTTP/1.1
+Content-Type: application/json
+
+  {
+"userAccount_id":7,
+   
+    "email":"testingchanged@gmail.com",
+    "password":"paswordchanged",
+    "phone":"(251) 895117179",
+    "address":"39 West bromwich",
+    "avatar":"com/abc/pics/2",
+    "roleName":"Advanced Member",
+    "education":"Masters",
+    "skills": "java,.net,react,spring",
+    "accountCreation_date":"2010-11-11",
+    "designation": "Area Manager",
+    "bio":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus euismod imperdiet. Duis semper, orci pulvinar egestas mattis, enim est placerat libero, laoreet luctus est nisl in mauris. Vestibulum rhoncus accumsan lacus eu viverra. In vitae dapibus nunc. Donec non posuere nisl. Pellentesque vel vehicula quam, sed elementum velit. Maecenas eleifend leo sit amet lacus semper, in semper lorem molestie.Mauris vel pellentesque nisl. Donec id feugiat felis, interdum imperdiet nisl. Phasellus ut sagittis ex. Donec malesuada ipsum lacus, sit amet iaculis odio congue porttitor. Maecenas leo diam, mollis id arcu sit amet, euismod vulputate massa. Vestibulum at lectus leo. Nulla aliquet dignissim feugiat. Vestibulum eu congue leo, sed ullamcorper magna. Cras id eros eget odio efficitur sollicitudin eget at leo."
+
+
+    }
+
+
+######
+POST {{url}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "testingNew",
+    "email":"testNew@gmail.com",
+    "password":"password",
+    "phone":"(251) 895117179",
+    "address":"39 West bromwich",
+    "avatar":"com/abc/pics/2",
+    "roleName":"Admin",
+    "education":"Masters",
+    "skills": "java,.net,react,spring",
+    "accountCreation_date":"2010-11-11",
+    "designation": "Areabranch Manager",
+  "bio":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus euismod imperdiet. Duis semper, orci pulvinar egestas mattis, enim est placerat libero, laoreet luctus est nisl in mauris. Vestibulum rhoncus accumsan lacus eu viverra. In vitae dapibus nunc. Donec non posuere nisl. Pellentesque vel vehicula quam, sed elementum velit. Maecenas eleifend leo sit amet lacus semper, in semper lorem molestie.Mauris vel pellentesque nisl. Donec id feugiat felis, interdum imperdiet nisl. Phasellus ut sagittis ex. Donec malesuada ipsum lacus, sit amet iaculis odio congue porttitor. Maecenas leo diam, mollis id arcu sit amet, euismod vulputate massa. Vestibulum at lectus leo. Nulla aliquet dignissim feugiat. Vestibulum eu congue leo, sed ullamcorper magna. Cras id eros eget odio efficitur sollicitudin eget at leo."
+  
+  
+  }
+
+
+  
+
+###
+
+DELETE {{url}}/6 HTTP/1.1

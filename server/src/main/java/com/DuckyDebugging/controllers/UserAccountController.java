@@ -18,6 +18,7 @@ public class UserAccountController {
         this.service = service;
     }
 
+
     @GetMapping
     public List<UserAccount> findAll() {
         return service.findAll();
@@ -26,6 +27,18 @@ public class UserAccountController {
     @GetMapping("/{userAccountId}")
     public UserAccount findById(@PathVariable int userAccountId) {
         return service.findById(userAccountId);
+    }
+
+
+    @PostMapping("/login")
+    public ResponseEntity<UserAccount> findByCredentials(@RequestBody UserAccount account) {
+        UserAccount userAccount = service.findByCredentials(account.getUsername() , account.getPassword());
+
+        if (userAccount == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+        }
+        return ResponseEntity.ok(userAccount);
     }
 
     @PostMapping

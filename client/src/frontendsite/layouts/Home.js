@@ -86,6 +86,11 @@ export default function Home() {
                     <Col sm="4" className='mt-2 mb-2'>
                         <HomePageMemberCard title="username1" value="May 2021 . python . Django " image={DuckAvatar1}/>
                     </Col>
+                    <Col sm="12" style={{textAlign:'center'}}>
+                        <Button variant="info" className='home-view-all-button' href="/our-members">
+                            View All
+                        </Button>
+                    </Col>
                 </Row>
             </Container>
             <Footer></Footer>

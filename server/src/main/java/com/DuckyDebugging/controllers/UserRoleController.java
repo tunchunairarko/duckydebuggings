@@ -31,7 +31,6 @@ public class UserRoleController {
         return service.findAll();
     }
 
-    @RequestMapping(value = "/", produces = "application/json")
     @PostMapping
     public ResponseEntity<Object> add(@RequestBody UserRole  userRole) {
         Result<UserRole> result = service.add(userRole);

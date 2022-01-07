@@ -11,7 +11,7 @@ public interface UserAccountRepository {
     UserAccount findById(int id);
     UserRole findByName(String name);
     UserAccount add(UserAccount userAccount);
-
+    UserAccount findByCredentials(String userName, String passWord);
     boolean update(UserAccount userAccount);
 
     boolean deleteById(int id);
